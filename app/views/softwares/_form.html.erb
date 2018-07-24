@@ -1,0 +1,117 @@
+<%= form_for(software) do |f| %>
+  <% if software.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(software.errors.count, "error") %> prohibited this software from being saved:</h2>
+
+      <ul>
+      <% software.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :category %>
+    <%= f.text_field :category %>
+  </div>
+
+  <div class="field">
+    <%= f.label :industry %>
+    <%= f.text_field :industry %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "create Software" , class: ' btn btn-success' %>
+  </div>
+<% end %>
+
+
+
+<div class="alert alert-primary">
+  A simple primary alert—check it out!
+</div>
+<div class="alert alert-secondary">
+  A simple secondary alert—check it out!
+</div>
+<div class="alert alert-success">
+  A simple success alert—check it out!
+</div>
+<div class="alert alert-danger">
+  A simple danger alert—check it out!
+</div>
+<div class="alert alert-warning">
+  A simple warning alert—check it out!
+</div>
+<div class="alert alert-info" >
+  A simple info alert—check it out!
+</div>
+<div class="alert alert-light">
+  A simple light alert—check it out!
+</div>
+<div class="alert alert-dark" >
+  A simple dark alert—check it out!
+</div>
+
+
+
+<h1 class="alert alert-warning"> 
+  dfsgsdfg
+</h1>
+
+
+
+<h1 class="alert alert-warning"> 
+dfsgsdfg
+</h1>
+
+
+
+<h1 class="alert alert-warning"> 
+   dfsgsdfg
+</h1 >
+
+
+
+<h1 class="alert alert-warning"> 
+  dsfadsfa
+</h1>
+
+
+
+<h1 class="alert alert-warning"> 
+dsfadsfa
+</h1>
+
+
+<h1 class="alert alert-warning"> 
+dfasdf
+</h1>
+
+
+
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item active" aria-current="page">Home</li>
+  </ol>
+</nav>
+
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><%= link_to "softwares",softwares_path %></li>
+    <li class="breadcrumb-item active"><%= link_to "Keywords",keywords_path %></li>
+  </ol>
+</nav>
+
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Home</a></li>
+    <li class="breadcrumb-item"><a href="#">Library</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Data</li>
+  </ol>
+</nav>

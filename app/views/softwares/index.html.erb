@@ -1,0 +1,200 @@
+<div class="row">
+  
+  <div class="col-sm-2">
+    .col-sm-4 .col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4.col-sm-4
+  </div>
+
+  <div class="col-sm-10">
+    <h6>Softwares</h6>
+    <table class = "table table-striped table-bordered table-hover">
+      <thead>
+        <tr class="success">
+          <th>Name</th>
+          <th>Category</th>
+          <th>Industry</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @softwares.each do |software| %>
+          <tr class="success">
+            <td ><%= software.name %></td>
+            <td class = "danger"><%= software.category %></td>
+            <td><%= software.industry %></td>
+            <td><%= link_to 'Show', software %></td>
+            <td><%= link_to 'Edit', edit_software_path(software) %></td>
+            <td><%= link_to 'Destroy', software, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+    <br>
+
+    <%= button_tag "create three software records",id:"create_three_records" %>
+    <br>
+
+
+    <%= link_to 'New Software', new_software_path %>
+
+    <br>
+
+    <%= link_to "sample1", sample1_software_path(1) %>
+
+    <br>
+
+    <%= link_to "sample2", sample2_software_path(1) %>
+
+    <br>
+
+    <%= link_to "sample3", sample3_softwares_path %>
+
+    <div id= "ajax_result">
+</div>
+
+<br>
+</div>
+</div>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Default</td>
+        <td>Defaultson</td>
+        <td>def@somemail.com</td>
+      </tr>      
+      <tr class="success">
+        <td>Success</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr class="danger">
+        <td>Danger</td>
+        <td>Moe</td>
+        <td>mary@example.com</td>
+      </tr>
+      <tr class="info">
+        <td>Info</td>
+        <td>Dooley</td>
+        <td>july@example.com</td>
+      </tr>
+      <tr class="warning">
+        <td>Warning</td>
+        <td>Refs</td>
+        <td>bo@example.com</td>
+      </tr>
+      <tr class="active">
+        <td>Active</td>
+        <td>Activeson</td>
+        <td>act@example.com</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+
+<button type="button" class="btn">Basic</button>
+<button type="button" class="btn btn-default">Default</button>
+<button type="button" class="btn btn-primary">Primary</button>
+<button type="button" class="btn btn-success">Success</button>
+<button type="button" class="btn btn-info">Info</button>
+<button type="button" class="btn btn-warning">Warning</button>
+<button type="button" class="btn btn-danger">Danger</button>
+<button type="button" class="btn btn-link">Link</button>
+
+<br>
+<br>
+
+<button type="button" class="btn btn-primary btn-lg">Large</button>
+<button type="button" class="btn btn-primary btn-md">Medium</button>
+<button type="button" class="btn btn-primary btn-sm">Small</button>
+<button type="button" class="btn btn-primary btn-xs">XSmall</button>
+
+<br>
+<br>
+
+<button type="button" class="btn btn-primary active">Active Primary</button>
+<button type="button" class="btn btn-primary disabled">Disabled Primary</button>
+
+
+<div class="container">
+  <h2>Glyphicon Examples</h2>
+  <p>Envelope icon: <span class="glyphicon glyphicon-envelope"></span></p>    
+  <p>Envelope icon as a link:
+    <a href="#"><span class="glyphicon glyphicon-envelope"></span></a>
+  </p>
+  <p>Search icon: <span class="glyphicon glyphicon-search"></span></p>
+  <p>Search icon on a button:
+    <button type="button" class="btn btn-default">
+      <span class="glyphicon glyphicon-search"></span> Search
+    </button>
+  </p>
+  <p>Search icon on a styled button:
+    <button type="button" class="btn btn-info">
+      <span class="glyphicon glyphicon-search"></span> Search
+    </button>
+  </p>
+  <p>Print icon: <span class="glyphicon glyphicon-print"></span></p>      
+  <p>Print icon on a styled link button:
+    <a href="#" class="btn btn-success btn-lg">
+      <span class="glyphicon glyphicon-print"></span> Print 
+    </a>
+  </p> 
+</div>
+<br>
+<button type="button" class="btn btn-primary">Primary <span class="badge">7</span></button>
+
+<br>
+<br>
+<br>
+
+<div class="dropdown">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#">HTML</a></li>
+    <li><a href="#">CSS</a></li>
+    <li><a href="#">JavaScript</a></li>
+  </ul>
+</div>
+
+dfdsfadsf
+dgadfgad
+
+
+
+<div class="container">
+  <h3>Inline List</h3>
+  <ul class="list-inline">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Menu 1</a></li>
+    <li><a href="#">Menu 2</a></li>
+    <li><a href="#">Menu 3</a></li>
+  </ul>
+</div>
+
+
+
+<script>
+$("#create_three_records").click(function(){
+    $.ajax({
+            type: "GET",
+            url: "softwares/ajax_demo",
+            data: "",
+            success: function(data) {
+             $("#ajax_result").text("created 3 records in softwares table");
+            },
+            error: function(data) {
+             alert("error")
+            }
+          });
+});
+</script>
