@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DemoApp</title>
+  <%= csrf_meta_tags %>
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body>
+<%#= link_to "Softwares",softwares_path %> <%#= link_to "Operating Systems",operating_systems_path %>
+<br>
+This is layout from satish
+
+<%= link_to "Cards List",cards_path %>
+<br>
+<%= link_to "Softwares List",softwares_path %>
+
+<%= yield %>
+<br>
+<%#= link_to "Softwares",softwares_path %> <%#= link_to "Operating Systems",operating_systems_path %>
+</body>
+</html>

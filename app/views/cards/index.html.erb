@@ -1,0 +1,43 @@
+<br>
+
+<%= link_to "rename_first_record", rename_first_record_card_path(Card.first) %>
+
+<br>
+
+<%= link_to "rename_second_record", rename_second_record_card_path(Card.last) %>
+
+<br>
+
+<%= link_to "rename_first_ten_records", rename_first_ten_records_cards_path %>
+
+<br>
+<h1>Cards</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Category</th>
+    <th>Industry</th>
+    <th colspan="3"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @cards.each do |card| %>
+    <tr>
+      <td><%= card.id %></td>
+      <td><%= card.name %></td>
+      <td><%= card.category %></td>
+      <td><%= card.industry %></td>
+      <td><%= link_to 'Show', card_path(card) %></td>
+      <td><%= link_to 'Edit', edit_card_path(card) %></td>
+      <td><%= link_to 'Destroy', card, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<%= link_to "New Card", new_card_path %>
+
